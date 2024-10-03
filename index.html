@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>DJ Maevell</title>
+	<style>
+		body {
+			padding: 0;
+			margin: 0;
+		}
+	</style>
+	<link rel="stylesheet" href="navbar.css">
+	<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="grid.css">
+	<link rel="stylesheet" href="lib/Skeleton-2.0.4/css/custom_skeleton.css">
+	<link rel="stylesheet" href="lib/Skeleton-2.0.4/css/normalize.css">
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+		integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+	<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+		integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+	
+	<link href="https://fonts.googleapis.com/css?family=Racing+Sans+One&display=swap" rel="stylesheet">
+
+
+
+	<!-- <link rel="stylesheet" href="lib/leaflet/leaflet.css" />
+	<script src="lib/leaflet/leaflet.js" ></script> -->
+</head>
+
+<body>
+	<!-- sets the background over the whole page -->
+	<div class="background-thing"></div>
+
+	<!-- navbar desktop-->
+	<nav class="navbar navswitch1">
+		<div class="container text-white">
+			<div class="nav-list">
+				<a class="nav-brand nav-push-right" href="index.html" style="font-weight:bold">MAEVELL</a>
+				<a class="nav-item" href="#">HOME</a>
+				<a class="nav-item" href="#over">OVER</a>
+				<a class="nav-item" href="#loopbaan">LOOPBAAN</a>
+				<a class="nav-item" href="#boekingen">BOEKINGEN</a>
+				<a class="nav-item" href="#prijzen">PRIJZEN</a>
+				<a class="nav-item" href="#ervaring">ERVARING</a>
+			</div>
+		</div>
+	</nav>
+	<!-- navbar mobile-->
+	<nav class="navbar navswitch2">
+		<div class="container text-white">
+			<div class="nav-list">
+				<div class="nav-top">
+					<a class="nav-brand nav-push-right" href="index.html" style="font-weight:bold">MAEVELL</a>
+					<a href="javascript:void(0);" class="icon" onclick="controlNav()">&#9776;</a>
+				</div>
+				<div class="nav-under" id="nav-u">
+					<a class="nav-item" href="#" onclick="controlNav()">HOME</a>
+					<a class="nav-item" href="#over" onclick="controlNav()">OVER</a>
+					<a class="nav-item" href="#loopbaan" onclick="controlNav()">LOOPBAAN</a>
+					<a class="nav-item" href="#boekingen" onclick="controlNav()">BOEKINGEN</a>
+					<a class="nav-item" href="#prijzen" onclick="controlNav()">PRIJZEN</a>
+					<a class="nav-item" href="#ervaring" onclick="controlNav()">ERVARING</a>
+				</div>
+			</div>
+		</div>
+	</nav>
+
+	<!-- the thing you see when visiting the website -->
+	<div class="fullscreen image-background header-1" style="background-image: url('images/5b.jpg');">
+		<div class="logo">
+			<img src="source/LOGO_WHITE.png" width="100%" alt="logo">
+		</div>
+	</div>
+
+	<!-- social icons -->
+	<!-- <div class="description  text-white bg-black">
+		<div class="container">
+			<div class="icon-bar">
+				<a href="https://www.facebook.com/jopwilminkmaevell/" class="social_icon"><img
+						src="source/social_icons/iconmonstr-facebook-3-white.svg" width="48px" height="48px"></a>
+				<a href="https://www.instagram.com/djmaevell/" class="social_icon"><img
+						src="source/social_icons/iconmonstr-instagram-130-white.svg" width="48px" height="48px"></a>
+				<a href="https://soundcloud.com/maevell" class="social_icon"><img
+						src="source/social_icons/iconmonstr-soundcloud-3-white.svg" width="48px" height="48px"></a>
+			</div>
+		</div>
+	</div> -->
+
+	<!-- text -->
+	<div class="description text-white">
+		<div class="container">
+			<div class="flex-grid">
+				<div class="col" id="over">
+					<h1>Over</h1>
+					<p>Ik ben Jop Wilmink. Ik ben een 24 jarige DJ. Het geeft mij voldoening iemands uitgaansavond als
+						DJ te volmaken.</p>
+					<p>Sinds 2018 werk ik als allround dj voor diverse clubs en feestcafés in heel Nederland. Zo werk ik
+						onder andere als vaste dj in de steden: Amsterdam, Arnhem, Utrecht Rotterdam en Nijmegen. Kijk
+						<a class="intext-button" href="#ervaring">ervaring</a> voor een volledig overzicht van al mijn
+						ervaring. .
+					</p>
+					<p>Als allround DJ ben ik thuis in bijna alle genres. Verschillende genres die ik draai zijn:
+						Moombahton, R&B/Urban Hip Hop, Reggaeton/Latin, Nederlandstalig, Après Ski, Pop, House/Techno,
+						Lounge, Disco en Oldies. Op de meeste gelegenheden draai ik deze genres door elkaar heen. Echter
+						ben ik ook te boeken als DJ voor specifieke genres gedurende de hele gelegenheid (zoals
+						bijvoorbeeld een uur/avond alleen maar house of Nederlandstalig). </p>
+					<p>Mijn eigen stijl bestaat voornamelijk uit het draaien van topplaten van uiteenlopende genres, die
+						ik in snel tempo in elkaar over laat lopen. Hierbij probeer ik platen, die je niet snel samen
+						zou verwachten, te vermengen tot een strakke mix.</p>
+				</div>
+				<div class="col col-space" id="loopbaan">
+					<h1>Loopbaan</h1>
+					<p>Als klein kind ben ik begonnen achter het drumstel. Van mijn achtste tot dertiende jaar heb ik
+						gedrumd. Ook heb van mijn zestiende tot zeventiende pianoles gehad. Ten slotte produceer ik
+						vanaf mijn dertiende mijn eigen muziek, zie hiervoor mijn <a
+							href="https://soundcloud.com/maevell">Soundcloud</a> pagina.</p>
+					<p>Op mijn zestiende nam ik DJ-lessen en begon ik met draaien op de eerste grote schoolfeesten in
+						bekendere Arnhemse clubs zoals Manhattan, Luxor Live en Plaza. Van schoolfeesten stapte ik in
+						2018 over naar mijn eerste vaste baan als DJ. Dit was bij bar Absolute Arnhem waar ik
+						maandelijks in het weekend draaide. Ik heb daar ruim een half jaar lounge, commerciële top 40 en
+						disco muziek gedraaid. Aan het eind van 2018 maakte ik de overstap naar K.O. Company, waar ik
+						tot op heden als dj werk voor diverse clubs in Arnhem, Nijmegen en Enschede. Verder ben ik
+						actief in de steden Amsterdam, Rotterdam en Utrecht, waar ik momenteel draai op wekelijkse
+						basis. Daarnaast ben ik ook jaarlijks actief in het buitenland in Albufeira (Portugal) en Val
+						Thorens (Frankrijk)</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- image -->
+	<div class="twothirdscreen image-background" style="background-image: url('images/Picture1.jpg');"></div>
+
+	<!-- text -->
+	<div class="description  text-white">
+		<div class="container">
+			<div class="flex-grid">
+				<div class="col" id="boekingen">
+					<h1>Boekingen</h1>
+					<p>Hoewel ik me in eerste instantie voornamelijk richt op festivals en het circuit van clubs en
+						feest cafés, ben ik ook zeker te boeken voor gelegenheden zoals
+						een trouwdag, een verjaardag of een bedrijfsfeest. Ik zie het als mijn uitdaging om samen met u
+						een onvergetelijk feest neer
+						te zetten. Ook kan ik extra's zoals licht- en geluidsapparatuur regelen zodat u geen moeite
+						hoeft te doen. Neem gerust contact op voor de mogelijkheden via het kopje <a href="#footer">
+							contact </a>. Voor boeking graag de volgende informatie vermelden:
+					</p>
+					<ul class="vermelden">
+						<li>Uw Naam</li>
+						<li>De datum</li>
+						<li>Type feest</li>
+						<li>Locatie feest (indien bekend)</li>
+					</ul>
+				</div>
+				<div class="col col-space" id="prijzen">
+					<h1>Prijzen</h1>
+					<p>Ik toon bewust geen prijsindicaties. De prijs van een DJ hangt van diverse factoren af. Hierbij
+						kunt u denken aan factoren zoals het soort gelegenheid, de al beschikbare apparatuur, de
+						reisafstand van de DJ en speciale verzoeken. Daarom kunt u voor een goede prijsindicatie het
+						beste contact opnemen via het kopje <a href="#footer"> contact </a>.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- image -->
+	<div class="twothirdscreen image-background" style="background-image: url('images/Picture3.jpg');"></div>
+
+	<!-- text -->
+	<div class="description image-background text-white maps" id="ervaring">
+		<div class="container">
+			<h1>Ervaring</h1>
+			<p>Ik heb als jonge DJ relatief veel ervaring. Vanaf 2018 draai ik elke week in verschillende soorten
+				horecazaken door heel Nederland. Hierdoor ben ik thuis vrijwel elk muziekgenre en heb ik de perfecte
+				muziek voor elke gelegenheid. Tegenwoordig draai ik in verschillende nationaal bekende horecazaken
+				(zoals Jantjes Verjaardag en Tante Roosje). Naast ervaring in Nederland heb ik ook ervaring opgedaan in
+				het buitenland zoals in Portugal, Frankrijk en zelfs Thailand. Hierbij ben ik niet alleen op de hoogte
+				van alle binnenlandse muziek maar ook van diverse muziektrends in het buitenland. Een overzicht van de
+				locaties waar ik actief ben (geweest) als dj vind u hieronder. </p>
+			<!-- <a href="javascript:void(0);" class="" onclick="maps()">&#9776; klik hier om de clubs en plaasten te
+				bekijken op de kaart</a>
+			<div class="maps-closed" id="googleMaps">
+				<iframe id="fraampie"
+					src="https://www.google.com/maps/d/embed?mid=1BsTvr_wDlaH0798AtOjAeKiaxfmiomCn&z=8"></iframe>
+			</div> -->
+			<div id="map"></div>
+			<div class="list-open" id="googleMapsList">
+				<div class="flex-grid ">
+					<div class="col-list">
+						<h6>Arnhem</h6>
+						<ul>
+							<li>Absolute Arnhem</li>
+							<li><a data-z="15" data-x="51.982810244328675" data-y="5.905341442102742" href="https://aspenvalley.nl/">Aspen Valley Arnhem</a></li>
+							<li><a data-z="15" data-x="51.982415338843296" data-y="5.904524057715565" href="https://freakypianobar.nl/">Freaky Piano Bar</a></li>
+							<li><a data-z="15" data-x="51.98400660872034" data-y="5.904469688102446" href="https://www.luxorlive.nl/">Luxor Live</a></li>
+							<li>Manhattan</li>
+							<li><a data-z="15" data-x="51.982813953584724" data-y="5.905059700055056" href="https://clubcircle.nl/  ">Plaza Arnhem/Club Circle</a></li>
+						</ul>
+					</div>
+					<div class="col-list">
+						<h6>Nijmegen</h6>
+						<ul>
+							<li><a data-z="15" data-x="51.84373839814149" data-y="5.862030927867086" href="https://bar2.nl/">Bar 2</a></li>
+							<li><a data-z="15" data-x="51.844107955265315" data-y="5.862058738054743" href="https://strettonijmegen.nl/">Café Stretto</a></li>
+							<li><a data-z="15" data-x="51.84357039537444" data-y="5.8621442461010504" href="https://rolluiknijmegen.nl/">Rolluik </a></li>
+							<li><a data-z="15" data-x="51.844357921113556" data-y="5.861945190111947" href="https://elsombreronijmegen.nl/">El Sombrero </a></li>
+							<li><a data-z="15" data-x="51.843866439463504" data-y="5.862068573074307" href="https://skihutnijmegen.nl/">Heidi’s Skihut</a> </li>
+							<li><a data-z="15" data-x="51.844045285146265" data-y="5.861840272083602" href="https://molenstraatnijmegen.nl/">Molenstraat Nijmegen </a> </li>
+							<li><a data-z="15" data-x="51.8439679273702" data-y="5.861990271739985" href="https://driegezustersnijmegen.nl/">Drie Gezusters </a> </li>
+							<li><a data-z="15" data-x="51.8439679273702" data-y="5.861990271739985" href="https://driegezustersnijmegen.nl/">The Basement</a> </li>
+							<li><a data-z="15" data-x="51.84541950985575" data-y="5.864711432900725" href="https://koningspleinnijmegen.nl/">Koningsplein Nijmegen </a> </li>
+						</ul>
+					</div>
+					<div class="col-list">
+						<h6>Urecht</h6>
+						<ul>
+							<li><a data-z="15" data-x="52.09435262668377" data-y="5.120547747271135" href="https://www.hetpakhuis.nl/">´t Pakhuis</a></li>
+							<li><a data-z="15" data-x="52.09327195400305" data-y="5.116870630763809" href="https://www.clubbasis.nl/">Basis</a></li>
+							<li><a data-z="15" data-x="52.09395588658262" data-y="5.120705852409932" href="https://www.dejansbar.nl/">De Jans Bar</a></li>
+							<li><a data-z="15" data-x="52.092203907278645" data-y="5.115730546729504" href="http://clubpoema.nl/">Poema</a></li>
+							<li><a data-z="15" data-x="52.09420374118926" data-y="5.122819831678844" href="https://www.facebook.com/wooutrecht/?locale=nl_NL">Woolloomooloo</a>
+							</li>
+							<li><a data-z="15" data-x="52.09576654527279" data-y="5.117696201593535" href="https://chupitos.nl/locations/utrecht">Chupitos </a></li>
+							<li><a data-z="15" data-x="52.09342812119156" data-y="5.125094610838439" href="https://devriendenutrecht.nl/">De Vrienden</a></li>
+							<li><a data-z="15" data-x="52.09308851096925" data-y="5.126246760423811" href="https://ginny-utrecht.nl/">Ginny</a></li>
+						</ul>
+					</div>
+					<div class="col-list">
+						<h6>Amsterdam</h6>
+						<ul>
+							<li><a data-z="15" data-x="52.36578190840483" data-y="4.895743936899681" href="http://www.jantjesverjaardag.nl/">Jantjes Verjaardag
+								</a></li>
+							<li><a data-z="15" data-x="52.36659550228582" data-y="4.896038728891933" href="https://tanteroosje.nl/">Tante Roosje
+								</a></li>
+						</ul>
+						<h6>Enschede</h6>
+						<ul>
+							<li><a data-z="15" data-x="52.22173900301958" data-y="6.896543805159761" href="https://aspenvalleyenschede.nl/">Aspen Valley
+									Enschede</a></li>
+						</ul>
+					</div>
+					<div class="col-list">
+						<h6>Albufeira</h6>
+						<ul>
+							<li><a data-z="8" data-x="37.09142509541442" data-y="-8.228510936462383" href="https://www.feestcafecelebration.nl/">Feestcafé Celebration</a></li>
+							<li><a data-z="8" data-x="37.08878503042459" data-y="-8.25174785832" href="https://www.feestcafebloopers.nl/">Feestcafe Bloopers</a></li>
+						</ul>
+
+						<h6>Frankrijk</h6>
+						<ul>
+							<li><a data-z="6" data-x="45.29760138348287" data-y="6.585293338807972" href="https://www.lemonde.nl/">Le Monde</a></li>
+						</ul>
+
+						<h6>Thailand</h6>
+						<ul>
+							<li><a data-z="4" data-x="7.743120443273688" data-y="98.77474190540278" href="https://www.facebook.com/phiphiibizapool/">Ibiza Pool Party</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="description  text-white">
+		<div class="container">
+			<div class="col" id="boekingen">
+				<h1>Mijn muziek</h1>
+				<iframe width="100%" height="450" scrolling="no" frameborder="no" allow=""
+					src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1277675182%3Fsecret_token%3Ds-ywn8TK7BvOt&color=%231d1c17&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true%22%3E</iframe><div style="
+					font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow:
+					hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida
+					Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a
+						href="https://soundcloud.com/maevell" title="Maevell" target="_blank"
+						style="color: #cccccc; text-decoration: none;">Maevell</a> · <a
+						href="https://soundcloud.com/maevell/sets/maevells-latest-tracks-website/s-ywn8TK7BvOt"
+						title="Maevell&#x27;s Latest Tracks (Website)" target="_blank"
+						style="color: #cccccc; text-decoration: none;">Maevell&#x27;s Latest Tracks (Website)</a>
+				</iframe>
+			</div>
+
+		</div>
+	</div>
+
+	<footer class="" id="footer">
+		<div class="container">
+			<div class="flex-grid ">
+				<div class="col">
+					<p class="text-bold">Contact</p>
+					<li><a href="tel:0624466186">Tel: 06-24466186</a></li>
+					<li><a href="mailto:jopwilmink@gmail.com">jopwilmink@gmail.com</a></li>
+				</div>
+				<div class="col">
+					<p class="text-bold">Connect</p>
+					<li><a href="https://www.instagram.com/djmaevell/">Instagram</a></li>
+					<li><a href="https://www.facebook.com/jopwilminkmaevell/">Facebook</a></li>
+					<li><a href="https://soundcloud.com/maevell">SoundCloud</a></li>
+				</div>
+				<div class="col">
+					<p class="text-bold">DJ Maevell</p>
+					<li>Jop Wilmink</li>
+					<!-- <li>2019</li> -->
+					<li>KVK: 73668052</li>
+					<li>BTW: NL002413846B64</li>
+				</div>
+				<div class="col">
+					<p class="text-bold">Site info</p>
+					<li>Wil je ook zo een mooie site?</li>
+					<li><a href="info.html" class="">Klik dan hier!</a></li>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<script src="script.js"></script>
+</body>
+
+</html>
